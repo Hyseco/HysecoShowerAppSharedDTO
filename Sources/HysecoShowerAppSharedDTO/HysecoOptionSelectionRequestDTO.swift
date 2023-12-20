@@ -22,20 +22,18 @@ public struct HysecoOptionSelectionRequestDTO: Codable {
     public let urlImageThumb: String
     public let urlImageDesc: String
     
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.optionName = try container.decode(String.self, forKey: .optionName)
-        self.optionTri = try container.decode(Int.self, forKey: .optionTri)
-        self.descriptionCourte = try container.decode(String.self, forKey: .descriptionCourte)
-        self.descriptionLongue = try container.decode(String.self, forKey: .descriptionLongue)
-        self.KP1 = try container.decode(String.self, forKey: .KP1)
-        self.KP2 = try container.decode(String.self, forKey: .KP2)
-        self.KP3 = try container.decode(String.self, forKey: .KP3)
-        self.moreImage1 = try container.decode(String.self, forKey: .moreImage1)
-        self.moreImage2 = try container.decode(String.self, forKey: .moreImage2)
-        self.moreImage3 = try container.decode(String.self, forKey: .moreImage3)
-        self.urlImage = try container.decode(String.self, forKey: .urlImage)
-        self.urlImageThumb = try container.decode(String.self, forKey: .urlImageThumb)
-        self.urlImageDesc = try container.decode(String.self, forKey: .urlImageDesc)
-    }
-}
+    public init(optionName: String, optionTri: Int, descriptionCourte: String, descriptionLongue: String, KP1: String, KP2: String, KP3: String, moreImage1: String, moreImage2: String, moreImage3: String, urlImage: String, urlImageThumb: String, urlImageDesc: String) {
+        self.optionName = optionName
+        self.optionTri = optionTri
+        self.descriptionCourte = descriptionCourte
+        self.descriptionLongue = descriptionLongue
+        self.KP1 = KP1
+        self.KP2 = KP2
+        self.KP3 = KP3
+        self.moreImage1 = moreImage1
+        self.moreImage2 = moreImage2
+        self.moreImage3 = moreImage3
+        self.urlImage = urlImage
+        self.urlImageThumb = urlImageThumb
+        self.urlImageDesc = urlImageDesc
+    }}
