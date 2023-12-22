@@ -23,7 +23,7 @@ public struct HysecoOptionSelectionResponseDTO: Codable {
     public let urlImageThumb: String
     public let urlImageDesc: String
     public let isDefaultSelection: Int
-    public let userChoice: [UUID]
+    public var userChoice: [UUID]
 
     public init(id: UUID, optionName: String, optionTri: Int, descriptionCourte: String, descriptionLongue: String, KP1: String, KP2: String, KP3: String, moreImage1: String, moreImage2: String, moreImage3: String, urlImage: String, urlImageThumb: String, urlImageDesc: String, isDefaultSelection: Int, userChoice: [UUID]) {
         self.id = id
