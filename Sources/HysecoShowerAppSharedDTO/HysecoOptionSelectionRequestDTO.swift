@@ -21,8 +21,9 @@ public struct HysecoOptionSelectionRequestDTO: Codable {
     public let urlImage: String
     public let urlImageThumb: String
     public let urlImageDesc: String
+    public let userChoice: [UUID]
     
-    public init(optionName: String, optionTri: Int, descriptionCourte: String, descriptionLongue: String, KP1: String, KP2: String, KP3: String, moreImage1: String, moreImage2: String, moreImage3: String, urlImage: String, urlImageThumb: String, urlImageDesc: String) {
+    public init(optionName: String, optionTri: Int, descriptionCourte: String, descriptionLongue: String, KP1: String, KP2: String, KP3: String, moreImage1: String, moreImage2: String, moreImage3: String, urlImage: String, urlImageThumb: String, urlImageDesc: String, userChoice: [UUID]) {
         self.optionName = optionName
         self.optionTri = optionTri
         self.descriptionCourte = descriptionCourte
@@ -36,4 +37,5 @@ public struct HysecoOptionSelectionRequestDTO: Codable {
         self.urlImage = urlImage
         self.urlImageThumb = urlImageThumb
         self.urlImageDesc = urlImageDesc
+        self.userChoice = userChoice
     }}
