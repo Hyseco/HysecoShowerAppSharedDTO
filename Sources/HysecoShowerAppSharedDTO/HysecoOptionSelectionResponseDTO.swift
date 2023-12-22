@@ -23,9 +23,8 @@ public struct HysecoOptionSelectionResponseDTO: Codable {
     public let urlImageThumb: String
     public let urlImageDesc: String
     public let isDefaultSelection: Int
-    public var userChoice: [UUID]
 
-    public init(id: UUID, optionName: String, optionTri: Int, descriptionCourte: String, descriptionLongue: String, KP1: String, KP2: String, KP3: String, moreImage1: String, moreImage2: String, moreImage3: String, urlImage: String, urlImageThumb: String, urlImageDesc: String, isDefaultSelection: Int, userChoice: [UUID]) {
+    public init(id: UUID, optionName: String, optionTri: Int, descriptionCourte: String, descriptionLongue: String, KP1: String, KP2: String, KP3: String, moreImage1: String, moreImage2: String, moreImage3: String, urlImage: String, urlImageThumb: String, urlImageDesc: String, isDefaultSelection: Int){
         self.id = id
         self.optionName = optionName
         self.optionTri = optionTri
@@ -41,7 +40,6 @@ public struct HysecoOptionSelectionResponseDTO: Codable {
         self.urlImageThumb = urlImageThumb
         self.urlImageDesc = urlImageDesc
         self.isDefaultSelection = isDefaultSelection
-        self.userChoice = userChoice
 
     }
 }
