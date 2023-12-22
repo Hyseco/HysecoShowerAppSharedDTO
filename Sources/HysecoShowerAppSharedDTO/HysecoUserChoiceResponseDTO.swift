@@ -8,10 +8,13 @@
 import Foundation
 public struct HysecoUserChoiceResponseDTO: Codable {
     public let id: UUID
-    public let userChoiceIds: String
+    public var optionCategoryId: UUID? = nil
+    public var userChoiceCategoryId: UUID? = nil
 
-    public init(id: UUID, userChoiceIds: String) {
+
+    public init(id: UUID, userChoiceCategoryId: UUID, optionCategoryId: UUID) {
         self.id = id
-        self.userChoiceIds = userChoiceIds
+        self.userChoiceCategoryId = userChoiceCategoryId
+        self.optionCategoryId = optionCategoryId
     }
 }
